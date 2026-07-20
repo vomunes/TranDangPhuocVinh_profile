@@ -145,11 +145,19 @@ a:visited{
 }
 
 .box h2 i{
-
     font-size:32px;
-
     color:#73c2ef;
+    animation: iconFloat 2s ease-in-out infinite;
+}
 
+@keyframes iconFloat{
+    0%,100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
 }
 
 .box p{
@@ -319,10 +327,11 @@ a:visited{
 
 <h2>
 
-<i class="fa-solid fa-user-graduate"></i>
+<i text-align:center; class="fa-solid fa-user-graduate"></i>
 
-Thông Tin
-
+</h2>
+<h2>
+    Thông Tin
 </h2>
 
 <p><b>Họ và tên:</b> Trần Đặng Phước Vinh</p>
@@ -339,12 +348,12 @@ Thông Tin
 
 <h2>
 
-<i class="fa-solid fa-award"></i>
-
-Thành Tựu
+<i text-align:center; class="fa-solid fa-award"></i>
 
 </h2>
-
+<h2>
+    Thành Tựu
+</h2>
 <ul class="achievement">
 
 <li>🥉 Lớp 6 - Giải ba học sinh giỏi Toán vòng trường.</li>
@@ -381,12 +390,12 @@ Thành Tựu
 
 <h2>
 
-<i class="fa-solid fa-address-card"></i>
-
-Liên Hệ
+<i text-align:center; class="fa-solid fa-address-card"></i>
 
 </h2>
-
+<h2>
+    Liên Hệ
+</h2>
 <p><i class="fa-solid fa-envelope"></i> <b>Email</b><br>
 trandangphuocvinh@gmail.com</p>
 
