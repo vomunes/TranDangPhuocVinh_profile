@@ -13,8 +13,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <style>
 
@@ -29,13 +28,13 @@ body{
     font-family:'Poppins',sans-serif;
     background:linear-gradient(135deg,	#E3FDFD,#dcefff,#f8fbff);
     min-height:100vh;
-    padding:40px;
+    padding:40px;   
 }
 
 .container{
     max-width:1200px;
     margin:auto;
-    background:rgb(203, 241, 245);
+    background:rgba(203, 241, 245, 0.8);
     backdrop-filter:blur(15px);
     border-radius:25px;
     padding:40px;
@@ -49,25 +48,7 @@ body{
     text-align:center;
 
     margin-bottom:40px;
-
 }
-
-.profile img{
-
-    width:180px;
-
-    height:180px;
-
-    object-fit:cover;
-
-    border-radius:50%;
-
-    border:6px solid white;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
-
-}
-
 .profile h1{
     color:#1f3b57;
     font-size:40px;
@@ -86,7 +67,9 @@ a{
     font-weight:800;
     transition:0.3s;
 }
-
+a:visited{
+    color:#4b7da8;
+}
 a:hover{
     color:#5aa9e8;
     text-decoration:underline;
@@ -96,9 +79,7 @@ a:active{
     color:#1e5685;
 }
 
-a:visited{
-    color:#4b7da8;
-}
+
 .cards{
 
     display:grid;
@@ -237,7 +218,16 @@ a:visited{
     font-size:15px;
 
 }
+.fade-in{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity 0.8s ease, transform 0.8s ease;
+}
 
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
 @media(max-width:768px){
 
     body{
@@ -292,23 +282,12 @@ a:visited{
     .profile h3{
         font-size:16px;
     }
-    .fade-in{
-    opacity:0;
-    transform:translateY(25px);
-    transition:opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.show{
-    opacity:1;
-    transform:translateY(0);
-}
+    
 }
 
 </style>
 
 </head>
-
-<body>
 
 <div class="container">
 
@@ -323,11 +302,11 @@ a:visited{
 
 <div class="cards">
 
-<div class="box">
+<div class="box" fade-in>
 
 <h2>
 
-<i text-align:center; class="fa-solid fa-user-graduate"></i>
+<i class="fa-solid fa-user-graduate"></i>
 
 </h2>
 <h2>
@@ -338,8 +317,6 @@ a:visited{
 
 <p><b>Ngày sinh:</b> 18/11/2009</p>
 
-<p><b>Địa chỉ:</b> Ấp 5, Xã U Minh, Tỉnh Cà Mau</p>
-
 <p><b>Trường:</b> THPT U Minh</p>
 
 </div>
@@ -348,7 +325,7 @@ a:visited{
 
 <h2>
 
-<i text-align:center; class="fa-solid fa-award"></i>
+<i class="fa-solid fa-award"></i>
 
 </h2>
 <h2>
@@ -390,34 +367,39 @@ a:visited{
 
 <h2>
 
-<i text-align:center; class="fa-solid fa-address-card"></i>
+<i class="fa-solid fa-address-card"></i>
 
 </h2>
 <h2>
     Liên Hệ
 </h2>
 <p><i class="fa-solid fa-envelope"></i> <b>Email</b><br>
-trandangphuocvinh@gmail.com</p>
+<a href="mailto:trandangphuocvinh@gmail.com">trandangphuocvinh@gmail.com</a></p>
 
 <p><i class="fa-solid fa-phone"></i> <b>Điện thoại</b><br>
-0919951334</p>
+<a href="tel:0919951334">0919951334</a></p>
 <p><b>Zalo</b><br>
-0919951334</p>
+<a href="tel:0919951334">0919951334</a></p>
 <a href="https://www.facebook.com/anhlavinhdepzai" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
 <i class="fab fa-facebook text-3xl hover:text-sky-400 transition-colors duration-300"></i>
-
+</a>
 </div>
-
+</div>
+</div>
 </div>
 
 <div class="footer fade-in">
 
-© 2026 | Designed by <b>Trần Đặng Phước Vinh</b>
+© <span id="year"></span>
+ | Designed by <b>Trần Đặng Phước Vinh</b>
 
 </div>
 
 </div>
 <script>
+// Set the current year
+document.getElementById("year").textContent = new Date().getFullYear();
+
 const fadeElements = document.querySelectorAll(".fade-in");
 
 const observer = new IntersectionObserver((entries)=>{
