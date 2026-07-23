@@ -32,7 +32,6 @@ Tin học
 }
 
 body{
-
 background:
 linear-gradient(
 120deg,
@@ -168,6 +167,10 @@ a{
     margin:10px 0;
     border-left:5px solid #a0cdf2;
     border-radius:10px;
+    transition:.3s;
+}
+.achievement li:hover{
+    transform:translateX(5px);
 }
 
 /* BUTTON */
@@ -233,9 +236,19 @@ a{
     color:#1877f2;
 }
 
-.links a:last-child i{
+.links a:nth-child(2) i{
     color:#000;
 }
+.links a:nth-child(3) i{
+    color:#fff;
+    filter:
+        drop-shadow(-2px -2px 0 #25F4EE)
+        drop-shadow(2px 2px 0 #FE2C55);
+}
+.links a:last-child i{
+    color:#C89B3C;
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -437,7 +450,19 @@ trandangphuocvinh@gmail.com
 <a href="https://github.com/vomunes" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 <i class="fa-brands fa-github"></i>
 </a>
+<a href="https://www.tiktok.com/@trandangphuocvinh"
+   aria-label="TikTok"
+   target="_blank"
+   rel="noopener noreferrer">
+    <i class="fa-brands fa-tiktok"></i>
+</a>
 
+<a href="https://locket.cam/ph.vinh"
+   aria-label="Locket"
+   target="_blank"
+   rel="noopener noreferrer">
+    <i class="fa-solid fa-heart"></i>
+</a>
 </div>
 
 
