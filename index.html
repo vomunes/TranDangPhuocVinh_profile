@@ -61,7 +61,7 @@ background-position:100% 50%;
 
 .container{
     max-width:1100px;
-    margin:auto;
+    margin:30px auto;
     padding:40px;
     border-radius:25px;
     background:#cbf1f5;
@@ -75,7 +75,7 @@ html{
 
 .profile{
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:50px;
 }
 
 .profile h1{
@@ -153,9 +153,7 @@ a{
     font-weight:700;
 }
 
-a:hover{
-    color:#5aa9e8;
-}
+
 
 
 /* ACHIEVEMENT */
@@ -170,24 +168,6 @@ a:hover{
     margin:10px 0;
     border-left:5px solid #a0cdf2;
     border-radius:10px;
-}
-.social i{
-    font-size:35px;
-    color:#1877f2;
-    transition:.3s;
-}
-
-.social i:hover{
-    transform:scale(1.2);
-}
-.github i{
-    font-size:35px;
-    color:black;
-    transition:.3s;
-}
-.github i:hover{
-    transform:scale(1.2);
-    color:#555;
 }
 
 /* BUTTON */
@@ -295,14 +275,16 @@ body{
 <section class="profile fade-in">
 
 <h1>Trần Đặng Phước Vinh</h1>
-
+<h3>
+Student • Competitive Programmer • Web Developer
+</h3>
 
 
 </section>
 
 
 
-<div class="cards">
+<section class="cards">
 
 
 <section class="box fade-in">
@@ -379,8 +361,38 @@ onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})"
 
 
 </section>
+<section class="box fade-in">
 
+<h2>
+<i class="fa-solid fa-code"></i>
+</h2>
 
+<h2>Kỹ Năng</h2>
+
+<ul class="achievement">
+    <li>C++</li>
+    <li>C</li>
+    <li>Pascal</li>
+    <li>STL</li>
+    <li>Data Structures</li>
+    <li>Dynamic Programming</li>
+    <li>Graph Algorithms</li>
+    <li>HTML / CSS / JavaScript</li>
+    <li>Git & GitHub</li>
+    <li>Python</li>
+    
+</ul>
+
+</section>
+<section class="box fade-in">
+    <h2><i class="fa-solid fa-laptop-code"></i></h2>
+    <h2>Competitive Programming</h2>
+    <ul class="achievement">
+        <li><a href = "https://oj.eiu.edu.vn/user/Vinh" target="_blank" rel="noopener noreferrer">EIUOJ</a></li>
+        <li><a href = "https://lqdoj.edu.vn/user/dangcapvutru" target="_blank" rel="noopener noreferrer">LQDOJ</a></li>
+        <li><a href = "https://oj.vnoi.info/user/dangcapvutru" target="_blank" rel="noopener noreferrer">VNOI</a></li>
+    </ul>
+</section>
 
 
 
@@ -422,7 +434,7 @@ trandangphuocvinh@gmail.com
 </a>
 
     
-<a href="https://github.com/vomunes" aria-label="Github" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/vomunes" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 <i class="fa-brands fa-github"></i>
 </a>
 
@@ -434,7 +446,7 @@ trandangphuocvinh@gmail.com
 </section>
 
 
-</div>
+</section>
 
 
 
