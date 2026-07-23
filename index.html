@@ -18,7 +18,7 @@ Tin học
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="icon" type="image/jpeg" href="avt.jpg">
+<link rel="icon" type="image/jpeg" href="avatar.jpg">
 <meta property="og:title" content="Trần Đặng Phước Vinh | Competitive Programmer">
 <meta property="og:description" content="Trang giới thiệu bản thân của Trần Đặng Phước Vinh">
 <meta property="og:type" content="website">
@@ -338,7 +338,48 @@ body{
     border-right:3px solid #71C9CE;
     white-space:nowrap;
 }
+.spinner{
+    width:60px;
+    height:60px;
+    border:6px solid rgba(255,255,255,.4);
+    border-top:6px solid #71C9CE;
+    border-radius:50%;
+    margin-top:25px;
+    animation:spin 1s linear infinite;
+}
 
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+.progress{
+    width:220px;
+    height:8px;
+    background:#ffffff55;
+    border-radius:20px;
+    margin-top:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:#71C9CE;
+    animation:loading 2s linear forwards;
+}
+
+@keyframes loading{
+    from{
+        width:0%;
+    }
+    to{
+        width:100%;
+    }
+}
 </style>
 
 </head>
@@ -346,9 +387,14 @@ body{
 
 <body>
 <div id="loader">
-    <img src="avt.jpg" alt="Trần Đặng Phước Vinh">
+    <img src="avatar.jpg" alt="avatar">
+    <div class="spinner"></div>
     <h2>Trần Đặng Phước Vinh</h2>
+    <div class="progress">
+    <div class="progress-bar"></div>
 </div>
+</div>
+
 <main class="container">
 
 
@@ -579,13 +625,14 @@ items.forEach(item=>observer.observe(item));
 
 </script>
 <script>
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     const loader = document.getElementById("loader");
     const title = document.getElementById("typing-title");
 
     const text = "Trần Đặng Phước Vinh";
 
+    // Giữ loader tối thiểu 2 giây
     setTimeout(() => {
 
         loader.classList.add("hide");
@@ -599,26 +646,20 @@ window.addEventListener("load", () => {
             function type() {
 
                 if (i < text.length) {
-
                     title.textContent += text.charAt(i);
                     i++;
-
-                    setTimeout(type, 120); // Tốc độ gõ (ms)
-
+                    setTimeout(type,120);
                 } else {
-
-                    // Gõ xong thì xóa con trỏ
                     title.style.borderRight = "none";
-
                 }
 
             }
 
             type();
 
-        }, 600);
+        },600);
 
-    }, 1000);
+    },2000);
 
 });
 </script>
