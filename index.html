@@ -5,13 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Trần Đặng Phước Vinh</title>
+<meta name="author" content="Trần Đặng Phước Vinh">
 
+<meta name="keywords" content="
+Trần Đặng Phước Vinh,
+Competitive Programmer,
+Web Developer,
+Tin học
+">
 <meta name="description" content="Trang giới thiệu bản thân của Trần Đặng Phước Vinh">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+<meta property="og:title" content="Trần Đặng Phước Vinh | Competitive Programmer">
+<meta property="og:description" content="Trang giới thiệu bản thân của Trần Đặng Phước Vinh">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vomunes.github.io">
 <style>
 
 *{
@@ -22,10 +32,32 @@
 }
 
 body{
-    min-height:100vh;
-    padding:40px;
-    background:linear-gradient(135deg,#E3FDFD,#dcefff,#f8fbff);
+
+background:
+linear-gradient(
+120deg,
+#E3FDFD,
+#dcefff,
+#b8e8ff
+);
+
+background-size:300% 300%;
+
+animation:bg 10s ease infinite;
+
 }
+
+
+@keyframes bg{
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+}
+
 
 .container{
     max-width:1100px;
@@ -35,7 +67,9 @@ body{
     background:#cbf1f5;
     box-shadow:0 10px 30px #0002;
 }
-
+html{
+    scroll-behavior:smooth;
+}
 
 /* PROFILE */
 
@@ -72,7 +106,8 @@ body{
 }
 
 .box:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px #0003;
 }
 
 .box h2{
@@ -86,7 +121,12 @@ body{
     color:#73c2ef;
     animation:float 2s infinite;
 }
-
+.box h3{
+    margin-top:20px;
+    color:#2d5d8c;
+    border-bottom:2px solid #dbefff;
+    padding-bottom:5px;
+}
 
 @keyframes float{
     50%{
@@ -131,15 +171,32 @@ a:hover{
     border-left:5px solid #a0cdf2;
     border-radius:10px;
 }
+.social i{
+    font-size:35px;
+    color:#1877f2;
+    transition:.3s;
+}
 
+.social i:hover{
+    transform:scale(1.2);
+}
+.github i{
+    font-size:35px;
+    color:black;
+    transition:.3s;
+}
+.github i:hover{
+    transform:scale(1.2);
+    color:#555;
+}
 
 /* BUTTON */
 
 .scroll-btn{
     display:block;
     margin:20px auto 0;
-    width:65px;
-    height:65px;
+    width:60px;
+    height:60px;
     border:none;
     border-radius:50%;
     background:#73c2ef;
@@ -178,8 +235,27 @@ a:hover{
     opacity:1;
     transform:none;
 }
+.links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:15px;
+}
+.links i{
+    font-size:35px;
+    transition:.3s;
+}
 
+.links i:hover{
+    transform:scale(1.2);
+}
+.links a:first-child i{
+    color:#1877f2;
+}
 
+.links a:last-child i{
+    color:#000;
+}
 /* MOBILE */
 
 @media(max-width:768px){
@@ -213,16 +289,14 @@ body{
 
 <body>
 
-<div class="container">
+<main class="container">
 
 
 <section class="profile fade-in">
 
 <h1>Trần Đặng Phước Vinh</h1>
 
-<h3>
-Student • Competitive Programmer • Web Developer • Problem Solver
-</h3>
+
 
 </section>
 
@@ -244,7 +318,7 @@ Student • Competitive Programmer • Web Developer • Problem Solver
 <p><b>Ngày sinh:</b> 18/11/2009</p>
 
 <p><b>Trường:</b> THPT U Minh</p>
-
+<p><b>Liên Hệ Công Việc</b></p>
 
 <button class="scroll-btn"
 onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
@@ -269,34 +343,38 @@ onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})"
 <h2>Thành Tựu</h2>
 
 
+
+<h3>Lớp 6</h3>
 <ul class="achievement">
+    <li>🥉 Giải ba HSG Toán vòng trường.</li>
+</ul>
 
-<li>🥉 Lớp 6 - Giải ba HSG Toán vòng trường.</li>
+<h3>Lớp 8</h3>
+<ul class="achievement">
+    <li>🥉 Giải ba Tin học trẻ vòng huyện.</li>
+    <li>🥉 Giải ba Tin học trẻ vòng tỉnh.</li>
+</ul>
 
-<li>🥉 Lớp 8 - Giải ba Tin học trẻ vòng huyện.</li>
+<h3>Lớp 9</h3>
+<ul class="achievement">
+    <li>🥉 Giải ba Casio vòng huyện.</li>
+    <li>🏅 Giải khuyến khích Casio vòng tỉnh.</li>
+    <li>🥉 Giải ba HSG Tin học huyện.</li>
+    <li>🥈 Giải nhì HSG Tin học tỉnh.</li>
+    <li>🥉 Giải ba Tin học trẻ huyện.</li>
+    <li>🥉 Giải ba Tin học trẻ tỉnh.</li>
+</ul>
 
-<li>🥉 Lớp 8 - Giải ba Tin học trẻ vòng tỉnh.</li>
+<h3>Lớp 10</h3>
+<ul class="achievement">
+    <li>🥉 Giải ba HSG Tin học tỉnh.</li>
+    <li>🏅 Khuyến khích Tin học trẻ tỉnh.</li>
+    <li>🥉 HCĐ Olympic 30/4 Tin học.</li>
+</ul>
 
-<li>🥉 Lớp 9 - Giải ba Casio vòng huyện.</li>
-
-<li>🏅 Lớp 9 - Giải khuyến khích Casio vòng tỉnh.</li>
-
-<li>🥉 Lớp 9 - Giải ba HSG Tin học huyện.</li>
-
-<li>🥈 Lớp 9 - Giải nhì HSG Tin học tỉnh.</li>
-
-<li>🥉 Lớp 9 - Giải ba Tin học trẻ huyện.</li>
-
-<li>🥉 Lớp 9 - Giải ba Tin học trẻ tỉnh.</li>
-
-<li>🥉 Lớp 10 - Giải ba HSG Tin học tỉnh.</li>
-
-<li>🏅 Lớp 10 - Khuyến khích Tin học trẻ tỉnh.</li>
-
-<li>🥉 Lớp 10 - HCĐ Olympic 30/4 Tin học.</li>
-
-<li>🥉 Lớp 11 - Giải ba HSG Tin học tỉnh.</li>
-
+<h3>Lớp 11</h3>
+<ul class="achievement">
+    <li>🥉 Giải ba HSG Tin học tỉnh.</li>
 </ul>
 
 
@@ -338,20 +416,19 @@ trandangphuocvinh@gmail.com
 </a>
 
 </p>
-
-
-<p>
-
+<div class = "links">
+<a href="https://facebook.com/anhlavinhdepzai" aria-label="Facebook" target="_blank" rel="noopener noreferrer"    >
 <i class="fa-brands fa-facebook"></i>
-
-<a href="https://facebook.com/anhlavinhdepzai"
-target="_blank">
-
-Facebook
-
 </a>
 
-</p>
+    
+<a href="https://github.com/vomunes" aria-label="Github" target="_blank" rel="noopener noreferrer">
+<i class="fa-brands fa-github"></i>
+</a>
+
+</div>
+
+
 
 
 </section>
@@ -370,7 +447,7 @@ Designed by <b>Trần Đặng Phước Vinh</b>
 </footer>
 
 
-</div>
+</main>
 
 
 
@@ -383,8 +460,10 @@ const observer=new IntersectionObserver(entries=>{
 
 entries.forEach(e=>{
 
-if(e.isIntersecting)
-e.target.classList.add("show");
+if(e.isIntersecting){
+    e.target.classList.add("show");
+    observer.unobserve(e.target);
+}
 
 });
 
